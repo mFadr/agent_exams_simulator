@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Agent-  Exam Simulator
 
 A Windows desktop application (Python + PySide6) for realistic exam practice. It
@@ -201,3 +202,6 @@ tests/       automated test suite
 - Cloud model names are not hard-coded. Enter one or use **Fetch models**.
 
 *Built by Matěj Fadrhons  [github.com/mFadr](https://github.com/mFadr)*
+=======
+# agent_exams_simulator
+>>>>>>> f823e4b85469d66e08c4773286fdd2d17f991692
