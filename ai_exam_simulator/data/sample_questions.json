@@ -1,0 +1,264 @@
+{
+  "format": "ai-exam-simulator/question-bank",
+  "version": 1,
+  "questions": [
+    {
+      "id": "sample_math_01", "subject": "Mathematics", "topic": "Algebra", "type": "single_choice", "difficulty": "easy",
+      "text": "What is the solution of the equation 3x + 7 = 22?",
+      "options": [{"id": "a", "text": "x = 3"}, {"id": "b", "text": "x = 5"}, {"id": "c", "text": "x = 7"}, {"id": "d", "text": "x = 29/3"}],
+      "correct_option_ids": ["b"],
+      "explanation": "Subtract 7 from both sides: 3x = 15, then divide by 3: x = 5.",
+      "hint": "Isolate the term with x first.", "skills": ["solving linear equations"], "provenance": "sample"
+    },
+    {
+      "id": "sample_math_02", "subject": "Mathematics", "topic": "Algebra", "type": "multiple_select", "difficulty": "medium",
+      "text": "Which of the following values are roots of x² − 5x + 6 = 0? Select all that apply.",
+      "options": [{"id": "a", "text": "1"}, {"id": "b", "text": "2"}, {"id": "c", "text": "3"}, {"id": "d", "text": "6"}],
+      "correct_option_ids": ["b", "c"],
+      "explanation": "x² − 5x + 6 factorises as (x − 2)(x − 3), so the roots are 2 and 3.",
+      "skills": ["factorising quadratics"], "provenance": "sample"
+    },
+    {
+      "id": "sample_math_03", "subject": "Mathematics", "topic": "Calculus", "type": "math_problem", "difficulty": "medium",
+      "text": "Differentiate f(x) = x³ · sin(x). Show your working and give f'(x) on the last line.",
+      "expected_expression": "3*x^2*sin(x) + x^3*cos(x)",
+      "model_answer": "Product rule: f'(x) = (x³)' sin x + x³ (sin x)' = 3x² sin x + x³ cos x",
+      "rubric": {"criteria": [
+        {"id": "c1", "description": "Recognises and applies the product rule", "points": 2},
+        {"id": "c2", "description": "Correct derivatives of x³ and sin(x)", "points": 1},
+        {"id": "c3", "description": "Correct final expression", "points": 1}
+      ]},
+      "max_points": 4,
+      "explanation": "Use the product rule (uv)' = u'v + uv' with u = x³ and v = sin x.",
+      "skills": ["product rule"], "provenance": "sample"
+    },
+    {
+      "id": "sample_math_04", "subject": "Mathematics", "topic": "Calculus", "type": "numerical", "difficulty": "medium",
+      "text": "Evaluate the definite integral of 2x from x = 1 to x = 4.",
+      "numerical": {"value": 15, "abs_tolerance": 0, "rel_tolerance": 0.001, "unit": null, "solution_expression": "4^2 - 1^2"},
+      "explanation": "An antiderivative of 2x is x², so the integral is 4² − 1² = 16 − 1 = 15.",
+      "skills": ["definite integrals"], "provenance": "sample"
+    },
+    {
+      "id": "sample_math_05", "subject": "Mathematics", "topic": "Probability", "type": "true_false", "difficulty": "easy",
+      "text": "The probability of getting two heads when tossing two fair coins is 1/4.",
+      "options": [{"id": "true", "text": "True"}, {"id": "false", "text": "False"}],
+      "correct_option_ids": ["true"],
+      "explanation": "The outcomes HH, HT, TH, TT are equally likely; only HH has two heads, so P = 1/4.",
+      "skills": ["basic probability"], "provenance": "sample"
+    },
+    {
+      "id": "sample_math_06", "subject": "Mathematics", "topic": "Geometry", "type": "fill_blank", "difficulty": "easy",
+      "text": "The sum of the interior angles of a triangle is ___ degrees, and of a quadrilateral it is ___ degrees.",
+      "blank_answers": [["180"], ["360"]],
+      "explanation": "A quadrilateral can be split into two triangles: 2 × 180° = 360°.",
+      "skills": ["angle sums"], "provenance": "sample"
+    },
+    {
+      "id": "sample_math_07", "subject": "Mathematics", "topic": "Trigonometry", "type": "numerical", "difficulty": "hard",
+      "text": "A ladder 5 m long leans against a vertical wall. Its foot is 1.4 m from the wall. At what height (in metres) does the ladder touch the wall? Give the answer with a unit.",
+      "numerical": {"value": 4.8, "abs_tolerance": 0.01, "rel_tolerance": 0.0, "unit": "m", "solution_expression": "sqrt(5^2 - 1.4^2)"},
+      "explanation": "Pythagoras: h = √(5² − 1.4²) = √(25 − 1.96) = √23.04 = 4.8 m.",
+      "skills": ["Pythagorean theorem", "modelling"], "provenance": "sample"
+    },
+    {
+      "id": "sample_phys_01", "subject": "Physics", "topic": "Mechanics", "type": "numerical", "difficulty": "medium",
+      "text": "A car accelerates uniformly from rest to 20 m/s in 8 s. What distance does it cover in that time? Include the unit.",
+      "numerical": {"value": 80, "abs_tolerance": 0, "rel_tolerance": 0.01, "unit": "m", "solution_expression": "0.5*20*8"},
+      "explanation": "Distance = average velocity × time = (0 + 20)/2 × 8 = 80 m.",
+      "skills": ["kinematics"], "provenance": "sample"
+    },
+    {
+      "id": "sample_phys_02", "subject": "Physics", "topic": "Mechanics", "type": "single_choice", "difficulty": "easy",
+      "text": "Which quantity is a vector?",
+      "options": [{"id": "a", "text": "Mass"}, {"id": "b", "text": "Temperature"}, {"id": "c", "text": "Displacement"}, {"id": "d", "text": "Energy"}],
+      "correct_option_ids": ["c"],
+      "explanation": "Displacement has both magnitude and direction; the others are scalars.",
+      "skills": ["vectors vs scalars"], "provenance": "sample"
+    },
+    {
+      "id": "sample_phys_03", "subject": "Physics", "topic": "Electromagnetism", "type": "numerical", "difficulty": "easy",
+      "text": "A resistor of 12 Ω carries a current of 0.5 A. What is the voltage across it? Include the unit.",
+      "numerical": {"value": 6, "abs_tolerance": 0, "rel_tolerance": 0.01, "unit": "V", "solution_expression": "12*0.5"},
+      "explanation": "Ohm's law: U = R·I = 12 Ω × 0.5 A = 6 V.",
+      "skills": ["Ohm's law"], "provenance": "sample"
+    },
+    {
+      "id": "sample_phys_04", "subject": "Physics", "topic": "Thermodynamics", "type": "short_answer", "difficulty": "medium",
+      "text": "What is the name of the temperature at which all molecular motion would be minimal and which equals 0 K?",
+      "accepted_answers": ["absolute zero"],
+      "model_answer": "Absolute zero",
+      "explanation": "0 K is absolute zero (−273.15 °C).",
+      "skills": ["temperature scales"], "provenance": "sample"
+    },
+    {
+      "id": "sample_phys_05", "subject": "Physics", "topic": "Mechanics", "type": "essay", "difficulty": "hard",
+      "text": "Explain Newton's third law of motion and why the two forces in an action–reaction pair do not cancel each other out. Give an everyday example.",
+      "rubric": {
+        "criteria": [
+          {"id": "c1", "description": "States the law correctly: forces come in equal and opposite pairs", "points": 2, "expected_concepts": ["equal magnitude", "opposite direction"]},
+          {"id": "c2", "description": "Explains that the forces act on different bodies and therefore do not cancel", "points": 3, "expected_concepts": ["different objects"], "dimension": "reasoning"},
+          {"id": "c3", "description": "Gives a correct everyday example and identifies both forces", "points": 2},
+          {"id": "c4", "description": "Clear and well-structured explanation", "points": 1, "dimension": "clarity"}
+        ],
+        "common_misconceptions": ["The forces cancel because they are equal and opposite", "The larger object exerts a larger force"]
+      },
+      "max_points": 8,
+      "model_answer": "For every force that body A exerts on body B, B exerts a force of equal magnitude and opposite direction on A. The pair does not cancel because the two forces act on different bodies; cancellation only applies to forces acting on the same body. Example: when walking, your foot pushes the ground backwards and the ground pushes you forwards.",
+      "explanation": "Action–reaction forces act on different objects, so each object's motion is determined by the forces on it alone.",
+      "skills": ["Newton's laws", "scientific explanation"], "provenance": "sample"
+    },
+    {
+      "id": "sample_chem_01", "subject": "Chemistry", "topic": "Stoichiometry", "type": "numerical", "difficulty": "medium",
+      "text": "What is the molar mass of water (H2O) in g/mol? Use H = 1.008 and O = 16.00.",
+      "numerical": {"value": 18.016, "abs_tolerance": 0.02, "rel_tolerance": 0, "unit": "g/mol", "solution_expression": "2*1.008 + 16.00"},
+      "explanation": "M(H2O) = 2 × 1.008 + 16.00 = 18.016 g/mol.",
+      "skills": ["molar mass"], "provenance": "sample"
+    },
+    {
+      "id": "sample_chem_02", "subject": "Chemistry", "topic": "Acids and Bases", "type": "single_choice", "difficulty": "easy",
+      "text": "A solution has pH 3. How would you describe it?",
+      "options": [{"id": "a", "text": "Strongly basic"}, {"id": "b", "text": "Neutral"}, {"id": "c", "text": "Acidic"}, {"id": "d", "text": "Weakly basic"}],
+      "correct_option_ids": ["c"],
+      "explanation": "pH below 7 is acidic at 25 °C.",
+      "skills": ["pH scale"], "provenance": "sample"
+    },
+    {
+      "id": "sample_chem_03", "subject": "Chemistry", "topic": "Atomic Structure", "type": "matching", "difficulty": "easy",
+      "text": "Match each subatomic particle with its electric charge.",
+      "match_pairs": [{"id": "p1", "left": "Proton", "right": "+1"}, {"id": "p2", "left": "Electron", "right": "−1"}, {"id": "p3", "left": "Neutron", "right": "0"}],
+      "explanation": "Protons are positive, electrons negative, neutrons neutral.",
+      "skills": ["atomic structure"], "provenance": "sample"
+    },
+    {
+      "id": "sample_bio_01", "subject": "Biology", "topic": "Cell Biology", "type": "single_choice", "difficulty": "easy",
+      "text": "Which organelle is the main site of aerobic ATP production in eukaryotic cells?",
+      "options": [{"id": "a", "text": "Ribosome"}, {"id": "b", "text": "Mitochondrion"}, {"id": "c", "text": "Golgi apparatus"}, {"id": "d", "text": "Lysosome"}],
+      "correct_option_ids": ["b"],
+      "explanation": "Oxidative phosphorylation in mitochondria produces most of the cell's ATP.",
+      "skills": ["organelle functions"], "provenance": "sample"
+    },
+    {
+      "id": "sample_bio_02", "subject": "Biology", "topic": "Genetics", "type": "ordering", "difficulty": "medium",
+      "text": "Put the stages of protein synthesis in the correct order.",
+      "order_items": ["DNA is transcribed into mRNA", "mRNA is processed and leaves the nucleus", "mRNA binds to a ribosome", "tRNA brings amino acids according to codons", "The polypeptide chain is released"],
+      "explanation": "Transcription in the nucleus precedes translation on ribosomes, where tRNAs deliver amino acids until a stop codon.",
+      "skills": ["gene expression"], "provenance": "sample"
+    },
+    {
+      "id": "sample_bio_03", "subject": "Biology", "topic": "Genetics", "type": "numerical", "difficulty": "medium",
+      "text": "Two heterozygous pea plants (Aa × Aa) are crossed. What percentage of the offspring are expected to show the recessive phenotype?",
+      "numerical": {"value": 25, "abs_tolerance": 0.5, "rel_tolerance": 0, "unit": "%", "solution_expression": "100/4"},
+      "explanation": "Punnett square: AA, Aa, Aa, aa → 1/4 = 25 % are aa.",
+      "skills": ["Mendelian genetics"], "provenance": "sample"
+    },
+    {
+      "id": "sample_cs_01", "subject": "Computer Science", "topic": "Algorithms", "type": "single_choice", "difficulty": "medium",
+      "text": "What is the worst-case time complexity of binary search on a sorted array of n elements?",
+      "options": [{"id": "a", "text": "O(1)"}, {"id": "b", "text": "O(log n)"}, {"id": "c", "text": "O(n)"}, {"id": "d", "text": "O(n log n)"}],
+      "correct_option_ids": ["b"],
+      "explanation": "Each step halves the search interval, so at most ⌈log₂ n⌉ + 1 comparisons are needed.",
+      "skills": ["complexity analysis"], "provenance": "sample"
+    },
+    {
+      "id": "sample_cs_02", "subject": "Computer Science", "topic": "Data Structures", "type": "matching", "difficulty": "medium",
+      "text": "Match each data structure with the access pattern it is best known for.",
+      "match_pairs": [{"id": "p1", "left": "Stack", "right": "Last in, first out"}, {"id": "p2", "left": "Queue", "right": "First in, first out"}, {"id": "p3", "left": "Hash table", "right": "Average O(1) lookup by key"}, {"id": "p4", "left": "Binary heap", "right": "Fast access to the minimum or maximum"}],
+      "explanation": "These are the defining operations of each structure.",
+      "skills": ["data structures"], "provenance": "sample"
+    },
+    {
+      "id": "sample_prog_01", "subject": "Programming", "topic": "Functions", "type": "programming", "difficulty": "medium",
+      "text": "Write a Python function is_palindrome(s) that returns True if the string s reads the same forwards and backwards, ignoring case and spaces, and False otherwise.",
+      "function_name": "is_palindrome",
+      "test_cases": [
+        {"call": "is_palindrome('racecar')", "expected": "True"},
+        {"call": "is_palindrome('Never odd or even')", "expected": "True"},
+        {"call": "is_palindrome('python')", "expected": "False"},
+        {"call": "is_palindrome('')", "expected": "True", "hidden": true}
+      ],
+      "model_answer": "def is_palindrome(s):\n    t = s.replace(' ', '').lower()\n    return t == t[::-1]",
+      "max_points": 4,
+      "explanation": "Normalise the string (remove spaces, lower-case) and compare it with its reverse.",
+      "skills": ["string manipulation", "edge cases"], "provenance": "sample"
+    },
+    {
+      "id": "sample_prog_02", "subject": "Programming", "topic": "Control Flow", "type": "single_choice", "difficulty": "medium",
+      "text": "What does this Python code print?",
+      "code_context": "total = 0\nfor i in range(1, 5):\n    if i % 2 == 0:\n        continue\n    total += i\nprint(total)",
+      "options": [{"id": "a", "text": "4"}, {"id": "b", "text": "6"}, {"id": "c", "text": "10"}, {"id": "d", "text": "9"}],
+      "correct_option_ids": ["a"],
+      "explanation": "range(1, 5) is 1..4; even numbers are skipped, so total = 1 + 3 = 4.",
+      "skills": ["loops", "code tracing"], "provenance": "sample"
+    },
+    {
+      "id": "sample_prog_03", "subject": "Programming", "topic": "Recursion", "type": "short_answer", "difficulty": "medium",
+      "text": "What is the name of the condition that stops a recursive function from calling itself forever?",
+      "accepted_answers": ["base case", "base condition", "termination condition"],
+      "model_answer": "The base case",
+      "explanation": "Every recursive function needs a base case that returns without a further recursive call.",
+      "skills": ["recursion"], "provenance": "sample"
+    },
+    {
+      "id": "sample_hist_01", "subject": "History", "topic": "World Wars", "type": "single_choice", "difficulty": "easy",
+      "text": "In which year did the First World War begin?",
+      "options": [{"id": "a", "text": "1905"}, {"id": "b", "text": "1914"}, {"id": "c", "text": "1918"}, {"id": "d", "text": "1939"}],
+      "correct_option_ids": ["b"],
+      "explanation": "The war began in July 1914 after the assassination of Archduke Franz Ferdinand.",
+      "skills": ["chronology"], "provenance": "sample"
+    },
+    {
+      "id": "sample_hist_02", "subject": "History", "topic": "Cold War", "type": "ordering", "difficulty": "medium",
+      "text": "Arrange these Cold War events in chronological order.",
+      "order_items": ["Berlin Blockade", "Cuban Missile Crisis", "Prague Spring", "Fall of the Berlin Wall"],
+      "explanation": "Berlin Blockade (1948–49), Cuban Missile Crisis (1962), Prague Spring (1968), Fall of the Berlin Wall (1989).",
+      "skills": ["chronology"], "provenance": "sample"
+    },
+    {
+      "id": "sample_hist_03", "subject": "History", "topic": "Modern History", "type": "case_study", "difficulty": "hard",
+      "text": "Case study: In 1929 the US stock market crashed. Over the following years industrial production fell sharply, unemployment rose to about a quarter of the workforce, and international trade contracted as many countries raised tariffs (for example the Smoot–Hawley Tariff Act of 1930). Banks failed in large numbers and deflation increased the real burden of debts. Task: Analyse two mechanisms through which the crash turned into a prolonged worldwide depression and evaluate one policy response.",
+      "rubric": {
+        "criteria": [
+          {"id": "c1", "description": "Identifies a valid transmission mechanism (e.g. bank failures and credit contraction, deflation and debt burden, collapse of demand)", "points": 3},
+          {"id": "c2", "description": "Identifies a second distinct mechanism, including the international dimension (tariffs, gold standard, capital flows)", "points": 3},
+          {"id": "c3", "description": "Evaluates a policy response (e.g. New Deal, leaving the gold standard, protectionism) with reasoned judgement", "points": 3, "dimension": "reasoning"},
+          {"id": "c4", "description": "Uses evidence from the case and stays relevant", "points": 1, "dimension": "relevance"}
+        ]
+      },
+      "max_points": 10,
+      "model_answer": "Bank failures destroyed deposits and cut credit, reducing investment and consumption; deflation raised real debt burdens causing defaults. Internationally, protectionist tariffs like Smoot–Hawley triggered retaliation, collapsing trade, while the gold standard transmitted deflation between countries. Leaving the gold standard allowed monetary expansion and countries that left earlier recovered sooner, which suggests it was an effective response.",
+      "explanation": "Strong answers link financial, monetary and trade mechanisms and judge policies by evidence of recovery.",
+      "skills": ["causal analysis", "evaluation"], "provenance": "sample"
+    },
+    {
+      "id": "sample_econ_01", "subject": "Economics", "topic": "Supply and Demand", "type": "multiple_select", "difficulty": "medium",
+      "text": "Which of the following would shift the demand curve for coffee to the right? Select all that apply.",
+      "options": [{"id": "a", "text": "A rise in consumers' incomes (coffee is a normal good)"}, {"id": "b", "text": "A fall in the price of coffee"}, {"id": "c", "text": "A rise in the price of tea (a substitute)"}, {"id": "d", "text": "A fall in the price of coffee beans for producers"}],
+      "correct_option_ids": ["a", "c"],
+      "explanation": "Income and the price of substitutes shift demand; coffee's own price moves along the curve; input costs shift supply.",
+      "skills": ["demand shifters"], "provenance": "sample"
+    },
+    {
+      "id": "sample_geo_01", "subject": "Geography", "topic": "Physical Geography", "type": "true_false", "difficulty": "easy",
+      "text": "The Amazon River flows into the Pacific Ocean.",
+      "options": [{"id": "true", "text": "True"}, {"id": "false", "text": "False"}],
+      "correct_option_ids": ["false"],
+      "explanation": "The Amazon flows east and empties into the Atlantic Ocean.",
+      "skills": ["world geography"], "provenance": "sample"
+    },
+    {
+      "id": "sample_stat_01", "subject": "Statistics", "topic": "Descriptive Statistics", "type": "numerical", "difficulty": "easy",
+      "text": "What is the median of the data set 7, 3, 9, 1, 5, 11?",
+      "numerical": {"value": 6, "abs_tolerance": 0, "rel_tolerance": 0.001, "unit": null, "solution_expression": "(5+7)/2"},
+      "explanation": "Sorted: 1, 3, 5, 7, 9, 11. With an even count, the median is the mean of the middle values (5 + 7)/2 = 6.",
+      "skills": ["median"], "provenance": "sample"
+    },
+    {
+      "id": "sample_lang_01", "subject": "Languages", "topic": "Grammar", "type": "fill_blank", "difficulty": "easy",
+      "text": "Complete the sentence with the correct past simple form: Yesterday she ___ (go) to the library and ___ (buy) a book.",
+      "blank_answers": [["went"], ["bought"]],
+      "explanation": "'Go' and 'buy' are irregular verbs: go → went, buy → bought.",
+      "skills": ["irregular verbs"], "provenance": "sample"
+    }
+  ]
+}
